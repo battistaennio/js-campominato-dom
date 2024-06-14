@@ -68,3 +68,7 @@ button:hover{
     background-color: var(--colore-primario);
     color: black;
 }
+
+.box.bomb{
+    background-color: red;
+}

@@ -3,6 +3,7 @@
 //Ci saranno quindi 10 caselle per ognuna delle 10 righe.
 //Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
 
+
 //Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe. Attenzione: nella stessa cella può essere posizionata al massimo una bomba, perciò nell’array delle bombe non potranno esserci due numeri uguali.
 //In seguito l’utente clicca su una cella: se il numero è presente nella lista dei numeri generati - abbiamo calpestato una bomba - la cella si colora di rosso e la partita termina.
 //Altrimenti la cella cliccata si colora di azzurro e l’utente può continuare a cliccare sulle altre celle.
@@ -25,7 +26,7 @@ playButton.addEventListener("click",
         //lo posiziono in pagina
         document.querySelector("main").append(addContainer);
 
-        //creo array da 16 bombe con un valore da 1 a 100
+        //creo le bombe
         const bmbArray = [];
         while (bmbArray.length < 16) {
             let numRand = randomNumber(1, 100);
@@ -34,7 +35,7 @@ playButton.addEventListener("click",
             }
         }
         console.log(bmbArray);
-        
+
         //creo ciclo per creare 100 box dentro div.container al click
         for (let i = 1; i <= 100; i++) {
 
@@ -47,14 +48,20 @@ playButton.addEventListener("click",
             //aggioungo i div.box in div.container
             addContainer.append(addBox);
 
+
             //creo evento cambio colore al click di div.box
             addBox.addEventListener("click",
                 function () {
-                    //aggiungo/tolgo la classe clicked
-                    addBox.classList.add("clicked");
 
-                    //mostro in console il numero della casella cliccata
-                    console.log(i);
+                    //se il numero bomba e il numero div.box combacia, aggancio la bomba
+                    if(bmbArray.includes(i)){
+                        addBox.classList.add("bomb")
+
+                    } else {
+                         //altrimenti aggiungo/tolgo la classe clicked
+                        addBox.classList.add("clicked");
+                    }
+                    
                 }
                 
             );
