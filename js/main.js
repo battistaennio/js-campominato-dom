@@ -25,6 +25,16 @@ playButton.addEventListener("click",
         //lo posiziono in pagina
         document.querySelector("main").append(addContainer);
 
+        //creo array da 16 bombe con un valore da 1 a 100
+        const bmbArray = [];
+        while (bmbArray.length < 16) {
+            let numRand = randomNumber(1, 100);
+            if(!bmbArray.includes(numRand)) {
+                bmbArray.push(numRand);
+            }
+        }
+        console.log(bmbArray);
+        
         //creo ciclo per creare 100 box dentro div.container al click
         for (let i = 1; i <= 100; i++) {
 
@@ -41,7 +51,7 @@ playButton.addEventListener("click",
             addBox.addEventListener("click",
                 function () {
                     //aggiungo/tolgo la classe clicked
-                    addBox.classList.toggle("clicked");
+                    addBox.classList.add("clicked");
 
                     //mostro in console il numero della casella cliccata
                     console.log(i);
