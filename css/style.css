@@ -40,9 +40,20 @@ button:hover{
 
 }
 
-.vanish{
-    display: none;
+/* regole risultato */
+p{
+    text-align: center;
+    font-size: 20px;
 }
+
+#result-defeat-output{
+    color: rgb(255, 0, 0);
+}
+
+#result-win-output{
+    color: rgb(0, 160, 0);
+}
+
 
 /* container delle box */
 .container{
@@ -72,3 +83,12 @@ button:hover{
 .box.bomb{
     background-color: red;
 }
+
+/* regole per far apparire/sparire */
+.vanish{
+    display: none;
+}
+
+/* .visible{
+    display: block;
+} */
