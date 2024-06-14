@@ -36,6 +36,9 @@ playButton.addEventListener("click",
         }
         console.log(bmbArray);
 
+        //dichiaro il counter dei punti
+        let points = 0;
+
         //creo ciclo per creare 100 box dentro div.container al click
         for (let i = 1; i <= 100; i++) {
 
@@ -58,10 +61,14 @@ playButton.addEventListener("click",
                         addBox.classList.add("bomb")
 
                     } else {
-                         //altrimenti aggiungo/tolgo la classe clicked
+                        //altrimenti aggiungo la classe clicked
                         addBox.classList.add("clicked");
+                        //aggiungo un punto
+                        points += 1;
                     }
+                    console.log(points);
                     
+
                 }
                 
             );
