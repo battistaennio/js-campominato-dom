@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid | Bonus</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>CAMPOMINATO</h1>
+        <form action="#">
+            <span>Seleziona difficoltà:</span>
+            <select id="difficulty-selector" class="form-style">
+                <option value="100">Facile</option>
+                <option value="81">Media</option>
+                <option value="49">Difficile</option>
+            </select>
+            <br>
+            <button id="play" class="form-style">gioca</button>
+        </form>
+    </header>
+    
+    <main>
+        <!--<div class="container">
+                <div class="box"></div> x 100
+            </div> 
+        -->
+        <p id="result-defeat-output" class="vanish">Hai perso! Hai totalizzato <span id="points"></span> punti</p>
+
+        <p id="result-win-output" class="vanish">Hai vinto! Hai raggiunto il punteggio massimo!</p>
+
+        <button id="restart" class="form-style vanish" onClick="window.location.reload();">nuova partita</button>
+    </main>
+
+
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="js/function.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
