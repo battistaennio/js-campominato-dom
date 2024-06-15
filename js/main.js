@@ -65,13 +65,13 @@ playButton.addEventListener("click",
             //creo evento al click di div.box
             addBox.addEventListener("click",
                 function () {
-
+                    
                     //se il numero bomba e il numero div.box combacia, aggancio la bomba
                     if(bmbArray.includes(i)){
                         addBox.classList.add("bomb");
                         //mostro il messaggio "hai perso"
                         resultDefeat.classList.remove("vanish");
-                        showPoints.innerText = points;
+                        showPoints.innerText = points;                        
 
                     } else {
                         //altrimenti aggiungo la classe clicked
@@ -82,7 +82,7 @@ playButton.addEventListener("click",
                     }
 
                     //condizione di vincita
-                    if(points >= 86) {
+                    if(points === 84) {
                         resultWin.classList.remove("vanish");
                     }                    
 
